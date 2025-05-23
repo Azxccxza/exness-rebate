@@ -7,7 +7,12 @@ from telebot import types
 from keep_alive import keep_alive
 keep_alive()  # This runs the web server
 from oauth2client.service_account import ServiceAccountCredentials
+import json
+from oauth2client.service_account import ServiceAccountCredentials
 
+creds_json = os.environ['GOOGLE_CREDENTIALS']
+creds_dict = json.loads(creds_json)
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 # === Config ===
 BOT_TOKEN = "7819908648:AAGf1LErgGAtnX2sKp3VK5bUNSc1fqx7c78"
 JSON_FILE = "abc-rebate-28c4c9b196fe.json"
