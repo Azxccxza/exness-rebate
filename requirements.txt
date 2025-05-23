@@ -1,2 +1,6 @@
 pyTelegramBotAPI
 Flask
+gspread
+oauth2client
+python-telegram-bot
+Flask
